@@ -1,0 +1,29 @@
+<div class="filter-card">
+  <div class="filter-label">Filters</div>
+  <div class="launch-label">Launch Year</div>
+  <hr>
+  <div class="btn-container">
+    <ng-container *ngFor="let year of launchYears">
+      <button (click)="onLaunch(year,'launchedYear')" class="btn" [value]="year"
+        [ngClass]="{'btn-active': filters.launchedYear === year}">{{year}}</button>
+    </ng-container>
+  </div>
+  <div class="launch-label">Successful Launch</div>
+  <hr>
+  <div class="launch-landing">
+    <ng-container *ngFor="let btnValue of btnValues">
+      <button class="btn" [ngClass]="{'btn-active': filters.isLaunched === btnValue}"
+        (click)="onLaunch(btnValue,'isLaunched')" [value]="btnValue">{{btnValue === true ? 'True' : 'False'}}</button>
+    </ng-container>
+
+  </div>
+  <div class="launch-label">Succesful Landing</div>
+  <hr>
+  <div class="launch-landing">
+    <ng-container *ngFor="let btnValue of btnValues">
+      <button class="btn" [ngClass]="{'btn-active': filters.isLanded === btnValue}"
+        (click)="onLaunch(btnValue,'isLanded')" [value]="btnValue">{{btnValue === true ? 'True' : 'False'}}</button>
+    </ng-container>
+
+  </div>
+</div>

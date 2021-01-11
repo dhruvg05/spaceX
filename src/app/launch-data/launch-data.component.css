@@ -1,0 +1,145 @@
+.launch-space-container {
+    max-width: 1440px;
+}
+
+.launch-program-label {
+    display: flex;
+    justify-content: center;
+}
+
+.launch-detail-container {
+    display: flex;
+    padding-left: 25px;
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 700px) {
+    .launch-detail-container {
+        flex-direction: column;
+    }
+}
+
+.launch-filters {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15%;
+    min-width: 240px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .launch-filters  {
+        margin-bottom: 10px;
+        min-width: 0;
+    }
+}
+
+.launch-data {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.launch-detail-card {
+    width: calc(25% - 22px);
+    margin-right: 20px;
+    margin-bottom: 15px;
+    background: white;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+@media screen and (max-width: 1024px) {
+    .launch-detail-card {
+        width: calc(50% - 22px);
+    }
+}
+
+  @media screen and (max-width: 700px) {
+    .launch-detail-card {
+        margin-right: 15px;
+        width: calc(100% - 15px);
+    }
+}
+
+.launch-details {
+    padding: 25px;
+}
+
+.launch-img {
+    width: 100%;
+    background-color: #f2f2f2;
+    max-height: 400px;
+}
+
+.launch-name {
+    color: #63659f;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.mission-label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mission-ids {
+    margin: 0px;
+}
+
+.mission-id {
+    padding: 3px;
+}
+
+.launch-success {
+    color: #63659f;
+    font-weight: 400;
+}
+
+/* loader CSS */
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+  

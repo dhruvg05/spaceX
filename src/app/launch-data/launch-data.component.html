@@ -1,0 +1,38 @@
+<div class="launch-space-container">
+  <div *ngIf="isLoading" class="loader"></div>
+  <ng-container *ngIf="!isLoading">
+    <h1 class="launch-program-label">SpaceX Launch Programs</h1>
+    <div class="launch-detail-container ">
+      <div class="launch-filters">
+        <app-launch-filters></app-launch-filters>
+      </div>
+      <div class="launch-data">
+        <div class="launch-detail-card" *ngFor="let launchDetail of launchDetails">
+          <div class="launch-details">
+            <img class="launch-img" [src]="launchDetail.img">
+            <div class="launch-name">
+              {{launchDetail?.mission_name}}#{{launchDetail?.flight_no}}
+            </div>
+            <div class="mission-label">
+              MissionIds:
+            </div>
+            <ul class="mission-ids">
+              <li class="mission-id" *ngFor="let missionId of launchDetail?.missionIds">
+                {{missionId}}
+              </li>
+            </ul>
+            <div class="mission-label">
+              Launch year: <span class="launch-success">{{launchDetail.launch_year}}</span>
+            </div>
+            <div class="mission-label">
+              Successful Launch: <span class="launch-success">{{launchDetail.launch_success}}</span>
+            </div>
+            <div class="mission-label">
+              Successful Landing: <span class="launch-success">{{launchDetail.land_suceess}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

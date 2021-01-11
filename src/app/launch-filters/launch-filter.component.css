@@ -1,0 +1,49 @@
+.filter-card {
+    background-color: white;
+    padding: 15px;
+}
+
+.filter-label {
+    font-size: 19px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.launch-label {
+    text-align: center;
+    font-size: 18px;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: 1px solid #28a745;
+    background-color: white;
+    color: black;
+    outline: none;
+    padding: 9px 22px;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 0 1 40%;
+    margin: 10px;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-active {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.launch-landing {
+    text-align: center;
+}
